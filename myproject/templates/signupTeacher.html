@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Signup</title>
+    <style>
+        /* Center content vertically and horizontally */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #CCCCFF; /* Background color for the page */
+            font-family: Arial, sans-serif;
+        }
+        
+     
+        .signup-container {
+            text-align: center;
+            background-color: #9E7BFF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            max-width: 90%;
+        }
+
+        /* Style form labels */
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Style form inputs */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style submit button */
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="signup_process.php" method="POST"> <!-- Set the action to your server-side script -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="class">Class:</label>
+            <input type="text" id="class" name="class" required><br>
+
+            <label for="roll">ID:</label>
+            <input type="text" id="roll" name="roll" required><br>
+
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- myapp/templates/student_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <ul>
+        {% for student in students %}
+            <li><a href="{% url 'student_detail' student.sId %}">{{ student.sName }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_student' %}">Add Student</a>
+</body>
+</html>

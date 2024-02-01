@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include necessary meta tags, styles, and scripts -->
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login_student.css' %}">
+</head>
+<body>
+    
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post" action="{% url 'login_view' %}">
+            {% csrf_token %}
+            <label for="sId">ID:</label>
+            <input type="text" id="sId" name="sId" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <input type="submit" value="Log In">
+        </form>
+        {% if error_message %}
+            <p>{{ error_message }}</p>
+        {% endif %}
+    </div>
+
+    <script>
+        // JavaScript function to redirect to Home.html
+        function redirectToHome() {
+            // Simulate a successful login
+            
+            var sId = document.getElementById("sId").value;
+            var password = document.getElementById("password").value;
+            
+          
+            if (sId.trim() !== "" && password.trim() !== "") {
+                // Redirect to Home.html
+                window.location.href = "Home.html";
+            } else {
+                // Handle invalid login here (display an error message, etc.)
+                alert("Invalid login. Please provide valid credentials.");
+            }
+        }
+    </script>
+</body>
+</html>

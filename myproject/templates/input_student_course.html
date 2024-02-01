@@ -1,0 +1,20 @@
+<!-- myapp/templates/input_student_course.html -->
+{% load static %}
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'forms.css' %}">
+    <title>Input Student Course</title>
+</head>
+<body>
+    <h2>Input Student Course</h2>
+    <form method="post" action="{% url 'input_student_course' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

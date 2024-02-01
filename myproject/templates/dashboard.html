@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href ="{% static 'dashboard.css' %}"
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!-- Plotly CDN -->
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Academic performance of {{ student.sName }}!</h1>
+
+        <!-- Course and Attendance Table -->
+        <div class="table-container">
+            <h2>Course and Attendance:</h2>
+            <table>
+                <!-- Course and Attendance table content -->
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Attendance</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in course_attendance %}
+                        <tr>
+                            <td>{{ row.course__courseName }}</td>
+                            <td>{{ row.attendance }}</td>
+                           
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h2>Course and Marks:</h2>
+            <table>
+                <!-- Course and Attendance table content -->
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Marks</th>
+                        <th>Comment</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in assessment1 %}
+                        <tr>
+                            <td>{{ row.course__courseName }}</td>
+                            <td>{{ row.marks }}</td>
+                            <td>{{ row.comment }}</td>
+                           
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+       
+</body>
+</html>

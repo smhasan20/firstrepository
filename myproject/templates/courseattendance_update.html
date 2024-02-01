@@ -1,0 +1,17 @@
+<!-- myapp/templates/courseattendance_update.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Course Attendance</title>
+</head>
+<body>
+    <h1>Update Course Attendance</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+    <a href="{% url 'courseattendance_list' %}">Cancel</a>
+</body>
+</html>

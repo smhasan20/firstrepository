@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+  
+    <title>Student Performance Tracking System</title>
+</head>
+<body>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <div class="login-buttons">
+            <a href="#">Login</a>
+            
+        </div>
+    </nav>
+    
+    <main>
+        <section class="login-section">
+            <h2>Login As Student</h2>
+      
+            
+           <a href="{% url 'login_student' %}"><button class="login-button">Login</button></a>
+
+        </section>
+        <section class="login-section">
+            <h2>Login As Teacher</h2>
+          
+           
+            <a href="{% url 'login_teacher' %}"><button class="login-button">Login</button></a>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Student Performance Tracking System</p>
+    </footer>
+</body>
+</html>

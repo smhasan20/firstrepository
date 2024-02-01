@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'teacherActivity.css' %}">
+    <title>Teacher Activity</title>
+</head>
+<body>
+    <h1>Welcome, Esteemed Teacher!</h1>
+    <p> Here, you can engage in various actions to enhance the educational journey.</p>
+    
+    <h2>Actions:</h2>
+    <ul>
+        <li><a href="{% url 'student_list' %}">Student</a></li>
+        <li><a href="{% url 'add_teacher' %}">Add Teacher</a></li>
+        <li><a href="{% url 'course_list' %}">Course</a></li>
+        <li><a href="{% url 'courseattendance_list' %}">Add Course and Attendance</a></li>
+        <li><a href="{% url 'continuousassesment' %}">Continuous Assesment</a></li>
+    </ul>
+</body>
+</html>

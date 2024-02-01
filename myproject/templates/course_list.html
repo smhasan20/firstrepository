@@ -1,0 +1,18 @@
+<!-- myapp/templates/course_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course List</title>
+</head>
+<body>
+    <h1>Course List</h1>
+    <ul>
+        {% for course in courses %}
+            <li><a href="{% url 'course_detail' course.cId %}">{{ course.courseName }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_course' %}">Add Course</a>
+    
+</body>
+</html>

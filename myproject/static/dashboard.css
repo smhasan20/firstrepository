@@ -1,0 +1,60 @@
+/* dashboard.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #CCCCFF; /* Background color for the page */
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6667AB;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Adjust the width as needed */
+    width: 90%;
+    margin-top: 20px;
+    position: relative; 
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px; /* Added margin bottom to separate sections */
+}
+
+.table-container {
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.button-container {
+    margin-top: 20px;
+}

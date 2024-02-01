@@ -1,0 +1,20 @@
+<!-- myapp/templates/student_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Detail</title>
+</head>
+<body>
+    <h1>{{ student.sName }}</h1>
+    <p>Contact No: {{ student.contactNo }}</p>
+    <p>Address: {{ student.Address }}</p>
+    <!-- Add other details as needed -->
+    <a href="{% url 'student_update' student.sId %}">Update Student</a>
+    <form action="{% url 'student_delete' student.sId %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete Student</button>
+    </form>
+    <a href="{% url 'student_list' %}">Back to Student List</a>
+</body>
+</html>

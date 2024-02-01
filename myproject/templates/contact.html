@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <title>Contact Us - Student Performance Tracking System</title>
+   
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <div class="login-buttons">
+            <a href="{% url 'loginst' %}">Login</a>
+            <a href="{% url 'signup' %}">Signup</a>
+        </div>
+    </nav>
+
+    <section class="center-align">
+        <h2>Contact Student Performance Tracking System</h2>
+        <p>
+            If you have any questions, suggestions, or feedback, feel free to reach out to us. We appreciate your interest and are here to assist you.
+        </p>
+        <p>Contact Information:</p>
+        <ul>
+            <li>Email: info@studenttrackingsystem.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+        </ul>
+    </section>
+
+   
+</body>
+</html>

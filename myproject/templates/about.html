@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About Us - Student Performance Tracking System</title>
+    <link rel = 'stylesheet' href = "{% static 'about.css' %}"
+    
+    
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <div class="login-buttons">
+            <a href="{% url 'loginst' %}">Login</a>
+            <a href="{% url 'signup' %}">Signup</a>
+        </div>
+    </nav>
+
+    <section class="center-align">
+        
+        <p>
+            Welcome to the Student Performance Tracking System, where we strive to provide a robust platform that empowers educators, students, and parents alike. Our system is designed to offer valuable insights into student performance, facilitating academic excellence and growth.
+        </p>
+        <div class="key-features">
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Comprehensive student performance tracking</li>
+                <li>User-friendly interface for both educators and students</li>
+                <li>Insightful analytics for academic improvement</li>
+                <li>Efficient communication between educators and parents</li>
+            </ul>
+        </div>
+        <p>
+            Our commitment is to enhance the learning experience and contribute to the success of every student.
+        </p>
+    </section>
+    
+
+    <footer>
+        &copy; 2024 Student Performance Tracking System. All rights reserved.
+    </footer>
+
+</body>
+</html>

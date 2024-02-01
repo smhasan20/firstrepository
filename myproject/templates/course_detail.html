@@ -1,0 +1,19 @@
+<!-- myapp/templates/course_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Detail</title>
+</head>
+<body>
+    <h1>{{ course.courseName }}</h1>
+    <p>Teacher: {{ course.teacher }}</p>
+    <!-- Add other details as needed -->
+    <a href="{% url 'course_update' course.cId %}">Update Course</a>
+    <form action="{% url 'course_delete' course.cId %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete Course</button>
+    </form>
+    <a href="{% url 'course_list' %}">Back to Course List</a>
+</body>
+</html>

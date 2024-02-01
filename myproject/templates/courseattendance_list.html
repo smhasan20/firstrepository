@@ -1,0 +1,17 @@
+<!-- myapp/templates/courseattendance_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Attendance List</title>
+</head>
+<body>
+    <h1>Course Attendance List</h1>
+    <ul>
+        {% for attendance in course_attendances %}
+            <li><a href="{% url 'courseattendance_detail' attendance.id %}">{{ attendance.student }} - {{ attendance.course }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'courseattendance_add' %}">Add Course Attendance</a>
+</body>
+</html>

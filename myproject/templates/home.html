@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Student Performance Tracking System</title>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <div class="login-buttons">
+            <a href="{% url 'loginst' %}">Login</a>
+            <a href="{% url 'signup' %}">Signup</a>
+        </div>
+    </nav>
+
+   
+        <h2 align="center">Welcome to our Student Performance Tracking System!</h2>
+        <p align="center">"Empowering educators and students to achieve excellence through effective performance tracking"</p>
+    
+       
+
+    <section>
+        
+        <div>
+            <h2>Student Results</h2>
+            <p>Track performance in all exams: Marks, Grade, Percentage & Percentile achieved.<br>
+            Compare performance in different subjects.<br>
+            Get underperforming subjects.<br>
+            Get actionable insights to improve student performance.</p>
+        </div>
+        <img src="{% static 'background.jpg' %}" alt="Student Results Image">
+      
+    </section>
+
+    <section class="right-align">
+        <img src="{% static 'attendance.png' %}"alt="Attendance Image">
+        <div>
+            <h2>Attendance</h2>
+            <p>Track student attendance across all subjects.<br>
+            Get subject-wise average attendance and class average attendance.</p>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>Student Progress Graph</h2>
+            <p>Get accurate student performance graphs for all subjects.<br>
+            Track student exam performance with the help of graphs, take necessary corrective actions.</p>
+        </div>
+        <img src="{% static 'Pr.png' %}" alt="Student Progress Graph Image">
+       
+    </section>
+
+</body>
+</html>

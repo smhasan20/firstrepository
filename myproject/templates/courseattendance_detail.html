@@ -1,0 +1,21 @@
+<!-- myapp/templates/courseattendance_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Attendance Detail</title>
+</head>
+<body>
+    <h1>Course Attendance Detail</h1>
+    <p>Student: {{ attendance.student }}</p>
+    <p>Course: {{ attendance.course }}</p>
+    <p>Attendance: {{ attendance.attendance }}</p>
+    <!-- Add other details as needed -->
+    <a href="{% url 'courseattendance_update' attendance.id %}">Update Course Attendance</a>
+    <form action="{% url 'courseattendance_delete' attendance.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete Course Attendance</button>
+    </form>
+    <a href="{% url 'courseattendance_list' %}">Back to Course Attendance List</a>
+</body>
+</html>
